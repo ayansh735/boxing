@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+}
+
+.close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 999;
+}
+
+.close.active {
+  display: inline-block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px 30px 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+
+header .logo {
+  font-size: 2em;
+  font-family: "Black Ops One", cursive;
+  color: #fff;
+  text-decoration: none;
+  -webkit-animation: left-in 0.5s linear forwards;
+          animation: left-in 0.5s linear forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  opacity: 0;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  min-height: 100%;
+  background: #fff;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: left-in 0.5s linear forwards;
+          animation: left-in 0.5s linear forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  opacity: 0;
+}
+
+header nav:hover, header nav.active {
+  width: 300px;
+}
+
+header nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header nav ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav ul li:hover {
+  background: #111;
+}
+
+header nav ul li:hover a {
+  color: #fff;
+}
+
+header nav ul li a {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #111;
+  text-decoration: none;
+}
+
+header nav ul li a span:nth-child(1) {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  min-height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+header nav ul li a span:nth-child(1) i {
+  font-size: 24px;
+}
+
+header nav ul li a span:nth-child(2) {
+  position: relative;
+  display: block;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0 10px;
+  min-height: 60px;
+  line-height: 60px;
+  text-align: start;
+}
+
+header .toggle {
+  max-width: 60px;
+  cursor: pointer;
+  -webkit-animation: bottom-in 0.5s linear forwards;
+          animation: bottom-in 0.5s linear forwards;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  opacity: 0;
+}
+
+header .toggle img {
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px 0 110px;
+  background: url(../images/bg.png);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fade-in 0.5s linear forwards;
+          animation: fade-in 0.5s linear forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  opacity: 0;
+}
+
+.banner .content {
+  max-width: 600px;
+}
+
+.banner .content h2 {
+  font-size: 6em;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1em;
+  -webkit-animation: fade-in 0.5s linear forwards;
+          animation: fade-in 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.banner .content h3 {
+  font-size: 4em;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  -webkit-animation: fade-in 0.5s linear forwards;
+          animation: fade-in 0.5s linear forwards;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  opacity: 0;
+}
+
+.banner .content p {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #fff;
+  margin: 20px 0;
+  z-index: 99;
+  -webkit-animation: fade-in 0.5s linear forwards;
+          animation: fade-in 0.5s linear forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+}
+
+.banner .content a {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: fade-in 0.5s linear forwards;
+          animation: fade-in 0.5s linear forwards;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+  opacity: 0;
+}
+
+.banner .content a:hover {
+  background: #000;
+  color: #fff;
+  -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+}
+
+.banner .sci {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .sci li {
+  list-style: none;
+}
+
+.banner .sci li a {
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: right-in 0.5s linear forwards;
+          animation: right-in 0.5s linear forwards;
+  -webkit-animation-delay: calc(0.2s * var(--i));
+          animation-delay: calc(0.2s * var(--i));
+  opacity: 0;
+}
+
+.banner .sci li a:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  background: #000;
+  -webkit-box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.banner .sci li a:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.banner .sci li a img {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+/* Animation */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes left-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes left-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes right-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes right-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bottom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bottom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* Responsive Desing */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 40px;
+  }
+  header nav {
+    left: -600px;
+  }
+  header nav.active {
+    left: 0;
+    width: 300px;
+  }
+  header .toggle {
+    max-width: 40px;
+  }
+  .banner {
+    padding: 0 40px;
+  }
+  .banner .content h2 {
+    font-size: 3em;
+  }
+  .banner .content h3 {
+    font-size: 2em;
+  }
+  .banner .content P {
+    font-size: 1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  .banner .content a {
+    font-size: 1em;
+  }
+  .banner .sci {
+    position: absolute;
+    right: inherit;
+  }
+}
+/*# sourceMappingURL=style.css.map */

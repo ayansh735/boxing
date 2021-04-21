@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>GYM | Build a perfect body</title>
+  </head>
+  <body>
+    <div class="close" onclick="toggle();"></div>
+    <header>
+      <a href="#" class="logo">GYM</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"
+              ><span><i class="fas fa-home"></i></span><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span><i class="fas fa-user"></i></span><span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span><i class="fas fa-users"></i></span><span>Trainers</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span><i class="fas fa-blog"></i></span><span>Blog</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span><i class="fas fa-envelope"></i></span
+              ><span>Contact</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="toggle" onclick="toggle();">
+        <img src="images/toggle.png" />
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content">
+        <h2>Be Stronger</h2>
+        <h3>Be Powerfull</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          molestiae odio magni totam dolor, eum repellendus maiores facere
+          aliquam similique ipsum, quo magnam commodi natus minima qui? Nemo,
+          sunt iste voluptatibus debitis ex repellendus similique?
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#" style="--i: 11"><img src="images/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#" style="--i: 12"><img src="images/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#" style="--i: 13"><img src="images/instagram.png" /></a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const toggle = () => {
+        let menu = document.querySelector(".toggle");
+        let menuImg = document.querySelector(".toggle img");
+        let nav = document.querySelector("nav");
+        let close = document.querySelector(".close");
+        close.classList.toggle("active");
+        menu.classList.toggle("active");
+        nav.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
